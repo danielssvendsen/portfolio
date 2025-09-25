@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="meta.title">Arbeidserfaring</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Boot Script -->
+  <script src="js/boot.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/exp.css"> <!-- new dedicated stylesheet -->
+</head>
+<body>
+  <!-- Shared header -->
+  <div id="site-header"></div>
+
+  <main class="container">
+    <section aria-labelledby="exp-title">
+      <h2 id="exp-title" data-i18n="exp.title">Arbeidserfaring</h2>
+
+      <!-- Filter buttons -->
+      <div class="filter-controls" role="group" aria-label="Filtrer erfaring">
+        <button class="button" data-filter="all" aria-pressed="false" data-i18n="exp.filter.all">Alt</button>
+        <button class="button toggled" data-filter="major" aria-pressed="true" data-i18n="exp.filter.major">Primær</button>
+        <button class="button" data-filter="minor" aria-pressed="false" data-i18n="exp.filter.minor">Annet</button>
+
+        <!-- CV download button -->
+        <a href="assets/pdf/cv.pdf" download class="button" style="margin-left: auto;">
+          <i class="fas fa-download" aria-hidden="true"></i>
+          CV
+        </a>
+      </div>
+
+      <!-- Experience list -->
+      <ul class="filter-list exp-list" data-filter-list>
+
+        <!-- Tussa (MINOR) -->
+        <li data-level="minor">
+          <details class="exp">
+            <summary class="exp-summary">
+              <span class="item-icon">
+                <img src="assets/images/logos/tussa.png" alt="Tussa logo">
+              </span>
+              <span class="item-text">
+                <span data-i18n="exp.tussa.role"></span>
+                <span data-i18n="exp.tussa.org"></span>
+                <span data-i18n="exp.tussa.meta1"></span>
+                <span data-i18n="exp.tussa.meta2"></span>
+              </span>
+              <span class="exp-caret" aria-hidden="true"></span>
+            </summary>
+            <div class="exp-body">
+              <ul data-i18n-list="exp.tussa.bullets"></ul>
+              <p class="exp-skills">
+                <strong data-i18n="exp.skills_label">Ferdigheter:</strong>
+                <span data-i18n="exp.tussa.skills"></span>
+              </p>
+            </div>
+          </details>
+        </li>
+
+        <!-- Sunncom AS (MINOR) -->
+        <li data-level="minor">
+          <details class="exp">
+            <summary class="exp-summary">
+              <span class="item-icon">
+                <img src="assets/images/logos/sunncom.png" alt="Sunncom AS logo">
+              </span>
+              <span class="item-text">
+                <span data-i18n="exp.sunncom.role"></span>
+                <span data-i18n="exp.sunncom.org"></span>
+                <span data-i18n="exp.sunncom.meta1"></span>
+                <span data-i18n="exp.sunncom.meta2"></span>
+              </span>
+              <span class="exp-caret" aria-hidden="true"></span>
+            </summary>
+            <div class="exp-body">
+              <ul data-i18n-list="exp.sunncom.bullets"></ul>
+              <p class="exp-skills">
+                <strong data-i18n="exp.skills_label">Ferdigheter:</strong>
+                <span data-i18n="exp.sunncom.skills"></span>
+              </p>
+            </div>
+          </details>
+        </li>
+
+        <!-- Ålesund Data (MAJOR, parent static & always open) -->
+        <li data-level="major">
+          <div class="exp">
+            <div class="exp-summary static" style="display: flex; align-items: center; gap: 1rem;">
+              <span class="item-icon">
+                <img src="assets/images/logos/aledata.png" alt="Ålesund Data AS logo">
+              </span>
+              <span class="item-text">
+                <span data-i18n="exp.alesund.company"></span>
+                <span data-i18n="exp.alesund.meta1"></span>
+                <span data-i18n="exp.alesund.meta2"></span>
+              </span>
+
+              <!-- Download button aligned to the far right -->
+              <a href="assets/pdf/attest-aalesund-data.pdf" download class="button" style="margin-left: auto;">
+                <i class="fas fa-download" aria-hidden="true"></i>
+                <span data-i18n="exp.alesund.download">Arbeidsattest</span>
+              </a>
+            </div>
+
+            <div class="exp-body">
+              <!-- your roles list and everything else continues here... -->
+            </div>
+          </div>
+        </li>
+
+
+            <div class="exp-body">
+              <ul class="exp-roles">
+                <!-- Roles 2020–2013 -->
+                <li class="exp-role" data-level="major">
+                  <details class="exp" open>
+                    <summary class="exp-summary">
+                      <span class="item-text">
+                        <span data-i18n="exp.alesund_2020.role"></span>
+                        <span data-i18n="exp.alesund_2020.meta1"></span>
+                        <span data-i18n="exp.alesund_2020.meta2"></span>
+                      </span>
+                      <span class="exp-caret" aria-hidden="true"></span>
+                    </summary>
+                    <div class="exp-body">
+                      <ul data-i18n-list="exp.alesund_2020.bullets"></ul>
+                      <p class="exp-skills">
+                        <strong data-i18n="exp.skills_label">Ferdigheter:</strong>
+                        <span data-i18n="exp.alesund_2020.skills"></span>
+                      </p>
+                    </div>
+                  </details>
+                </li>
+
+                <li class="exp-role" data-level="major">
+                  <details class="exp" open>
+                    <summary class="exp-summary">
+                      <span class="item-text">
+                        <span data-i18n="exp.alesund_2018.role"></span>
+                        <span data-i18n="exp.alesund_2018.meta1"></span>
+                        <span data-i18n="exp.alesund_2018.meta2"></span>
+                      </span>
+                      <span class="exp-caret" aria-hidden="true"></span>
+                    </summary>
+                    <div class="exp-body">
+                      <ul data-i18n-list="exp.alesund_2018.bullets"></ul>
+                      <p class="exp-skills">
+                        <strong data-i18n="exp.skills_label">Ferdigheter:</strong>
+                        <span data-i18n="exp.alesund_2018.skills"></span>
+                      </p>
+                    </div>
+                  </details>
+                </li>
+
+                <li class="exp-role" data-level="major">
+                  <details class="exp" open>
+                    <summary class="exp-summary">
+                      <span class="item-text">
+                        <span data-i18n="exp.alesund_2015.role"></span>
+                        <span data-i18n="exp.alesund_2015.meta1"></span>
+                        <span data-i18n="exp.alesund_2015.meta2"></span>
+                      </span>
+                      <span class="exp-caret" aria-hidden="true"></span>
+                    </summary>
+                    <div class="exp-body">
+                      <ul data-i18n-list="exp.alesund_2015.bullets"></ul>
+                      <p class="exp-skills">
+                        <strong data-i18n="exp.skills_label">Ferdigheter:</strong>
+                        <span data-i18n="exp.alesund_2015.skills"></span>
+                      </p>
+                    </div>
+                  </details>
+                </li>
+
+                <li class="exp-role" data-level="major">
+                  <details class="exp" open>
+                    <summary class="exp-summary">
+                      <span class="item-text">
+                        <span data-i18n="exp.alesund_2014.role"></span>
+                        <span data-i18n="exp.alesund_2014.meta1"></span>
+                        <span data-i18n="exp.alesund_2014.meta2"></span>
+                      </span>
+                      <span class="exp-caret" aria-hidden="true"></span>
+                    </summary>
+                    <div class="exp-body">
+                      <ul data-i18n-list="exp.alesund_2014.bullets"></ul>
+                      <p class="exp-skills">
+                        <strong data-i18n="exp.skills_label">Ferdigheter:</strong>
+                        <span data-i18n="exp.alesund_2014.skills"></span>
+                      </p>
+                    </div>
+                  </details>
+                </li>
+
+                <li class="exp-role" data-level="major">
+                  <details class="exp" open>
+                    <summary class="exp-summary">
+                      <span class="item-text">
+                        <span data-i18n="exp.alesund_2013.role"></span>
+                        <span data-i18n="exp.alesund_2013.meta1"></span>
+                        <span data-i18n="exp.alesund_2013.meta2"></span>
+                      </span>
+                      <span class="exp-caret" aria-hidden="true"></span>
+                    </summary>
+                    <div class="exp-body">
+                      <ul data-i18n-list="exp.alesund_2013.bullets"></ul>
+                      <p class="exp-skills">
+                        <strong data-i18n="exp.skills_label">Ferdigheter:</strong>
+                        <span data-i18n="exp.alesund_2013.skills"></span>
+                      </p>
+                    </div>
+                  </details>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- Proservice AS -->
+        <li data-level="minor">
+          <details class="exp">
+            <summary class="exp-summary">
+              <span class="item-icon">
+                <img src="assets/images/logos/proservice.png" alt="Proservice AS logo">
+              </span>
+              <span class="item-text">
+                <span data-i18n="exp.proservice.role"></span>
+                <span data-i18n="exp.proservice.org"></span>
+                <span data-i18n="exp.proservice.meta1"></span>
+                <span data-i18n="exp.proservice.meta2"></span>
+              </span>
+              <span class="exp-caret" aria-hidden="true"></span>
+            </summary>
+            <div class="exp-body">
+              <ul data-i18n-list="exp.proservice.bullets"></ul>
+              <p class="exp-skills">
+                <strong data-i18n="exp.skills_label">Ferdigheter:</strong>
+                <span data-i18n="exp.proservice.skills"></span>
+              </p>
+            </div>
+          </details>
+        </li>
+
+        <!-- Coop Prix (MINOR, static - no caret) -->
+        <li data-level="minor">
+          <div class="exp">
+            <div class="exp-summary static">
+              <span class="item-icon">
+                <img src="assets/images/logos/coop.png" alt="Coop Prix logo">
+              </span>
+              <span class="item-text">
+                <span data-i18n="exp.coop.role"></span>
+                <span data-i18n="exp.coop.org"></span>
+                <span data-i18n="exp.coop.meta1"></span>
+                <span data-i18n="exp.coop.meta2"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Shared footer -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/partials.js" defer></script>
+  <script src="js/i18n/en.js" defer></script>
+  <script src="js/i18n/no.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/theme-toggle.js" defer></script>
+  <script src="js/filter.js" defer></script>
+</body>
+</html>

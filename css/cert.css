@@ -1,0 +1,122 @@
+/* ===================================
+   CERTIFICATIONS PAGE STYLES
+   File: css/cert.css
+=================================== */
+
+/* Heading spacing (match exp.html exactly) */
+.cert-section h2 {
+  margin: 0 0 0.5rem 0; /* same as global h2 in style.css */
+}
+
+/* --- Filter buttons --- */
+.cert-section .filter-controls {
+  margin-bottom: 1rem; /* identical to exp.html */
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cert-section .button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid var(--color-03);
+  color: var(--color-03);
+  background-color: var(--color-02);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 0;
+}
+
+.cert-section .button:hover {
+  background-color: var(--color-04);
+  color: var(--color-01);
+}
+
+.cert-section .button.toggled {
+  background-color: var(--color-04);
+  color: var(--color-01);
+}
+
+/* --- Certification list --- */
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* no extra margin */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Each certification card */
+.cert-list > li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  padding: 1rem;
+  border: 1px solid var(--color-03);
+  background-color: var(--surface-50);
+  border-radius: 6px;
+
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.cert-list > li:hover {
+  border-color: var(--color-04);
+  background-color: color-mix(in srgb, var(--color-02) 70%, transparent);
+}
+
+/* --- Logo column --- */
+.cert-list .item-icon {
+  flex: 0 0 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-list .item-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* --- Text column --- */
+.cert-list .item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.4;
+  color: var(--color-03);
+}
+
+/* Cert title (first line) */
+.cert-list .item-text > span:first-child {
+  font-weight: 600;
+  color: var(--color-05);
+  font-size: 1.05em;
+}
+
+/* Secondary lines */
+.cert-list .item-text > span:not(:first-child) {
+  font-weight: normal;
+  color: var(--color-03);
+  font-size: 0.95em;
+}
+
+/* --- Responsive layout --- */
+@media (max-width: 600px) {
+  .cert-list > li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cert-list .item-icon {
+    flex: none;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+  }
+}

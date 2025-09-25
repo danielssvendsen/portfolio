@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="meta.title">Sertifiseringer</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Boot Script -->
+  <script src="js/boot.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cert.css">
+</head>
+<body>
+  <!-- Shared header -->
+  <div id="site-header"></div>
+
+  <main class="container">
+    <section class="cert-section" aria-labelledby="certifications-title">
+      <h2 id="certifications-title" data-i18n="cert.title">Sertifiseringer</h2>
+
+      <!-- Filter buttons -->
+      <div class="filter-controls" role="group" aria-label="Filtrer sertifiseringer">
+        <button class="button toggled" data-filter="all" aria-pressed="false" data-i18n="cert.filter.all">Alle</button>
+        <button class="button" data-filter="major" aria-pressed="true" data-i18n="cert.filter.major">Hovedsertifikater</button>
+        <button class="button" data-filter="minor" aria-pressed="false" data-i18n="cert.filter.minor">Grunnleggende</button>
+      </div>
+
+      <!-- Certification items -->
+      <ul class="cert-list" data-filter-list>
+        <li data-level="major">
+          <span class="item-icon">
+            <img src="assets/images/logos/sophos.png" alt="Sophos logo" />
+          </span>
+          <span class="item-text">
+            <span data-i18n="cert.001_line1"></span>
+            <span data-i18n="cert.001_line2"></span>
+            <span data-i18n="cert.001_line3"></span>
+          </span>
+        </li>
+
+        <li data-level="major">
+          <span class="item-icon">
+            <img src="assets/images/logos/harvard.png" alt="Harvard / CS50x logo" />
+          </span>
+          <span class="item-text">
+            <span data-i18n="cert.002_line1"></span>
+            <span data-i18n="cert.002_line2"></span>
+            <span data-i18n="cert.002_line3"></span>
+          </span>
+        </li>
+
+        <li data-level="minor">
+          <span class="item-icon">
+            <img src="assets/images/logos/fortinet.png" alt="Fortinet logo" />
+          </span>
+          <span class="item-text">
+            <span data-i18n="cert.003_line1"></span>
+            <span data-i18n="cert.003_line2"></span>
+            <span data-i18n="cert.003_line3"></span>
+            <span data-i18n="cert.003_line4"></span>
+          </span>
+        </li>
+
+        <li data-level="minor">
+          <span class="item-icon">
+            <img src="assets/images/logos/sophos.png" alt="Sophos logo" />
+          </span>
+          <span class="item-text">
+            <span data-i18n="cert.004_line1"></span>
+            <span data-i18n="cert.004_line2"></span>
+            <span data-i18n="cert.004_line3"></span>
+          </span>
+        </li>
+
+        <li data-level="minor">
+          <span class="item-icon">
+            <img src="assets/images/logos/sophos.png" alt="Sophos logo" />
+          </span>
+          <span class="item-text">
+            <span data-i18n="cert.005_line1"></span>
+            <span data-i18n="cert.005_line2"></span>
+            <span data-i18n="cert.005_line3"></span>
+          </span>
+        </li>
+
+        <li data-level="minor">
+          <span class="item-icon">
+            <img src="assets/images/logos/sophos.png" alt="Sophos logo" />
+          </span>
+          <span class="item-text">
+            <span data-i18n="cert.006_line1"></span>
+            <span data-i18n="cert.006_line2"></span>
+            <span data-i18n="cert.006_line3"></span>
+          </span>
+        </li>
+
+        <li data-level="minor">
+          <span class="item-icon">
+            <img src="assets/images/logos/sophos.png" alt="Sophos logo" />
+          </span>
+          <span class="item-text">
+            <span data-i18n="cert.007_line1"></span>
+            <span data-i18n="cert.007_line2"></span>
+            <span data-i18n="cert.007_line3"></span>
+          </span>
+        </li>
+
+        <li data-level="minor">
+          <span class="item-icon">
+            <img src="assets/images/logos/veeam.png" alt="Veeam logo" />
+          </span>
+          <span class="item-text">
+            <span data-i18n="cert.008_line1"></span>
+            <span data-i18n="cert.008_line2"></span>
+          </span>
+        </li>
+
+        <li data-level="minor">
+          <span class="item-icon">
+            <img src="assets/images/logos/veeam.png" alt="Veeam logo" />
+          </span>
+          <span class="item-text">
+            <span data-i18n="cert.009_line1"></span>
+            <span data-i18n="cert.009_line2"></span>
+          </span>
+        </li>
+
+        <li data-level="minor">
+          <span class="item-icon">
+            <img src="assets/images/logos/veeam.png" alt="Veeam logo" />
+          </span>
+          <span class="item-text">
+            <span data-i18n="cert.010_line1"></span>
+            <span data-i18n="cert.010_line2"></span>
+          </span>
+        </li>
+
+        <li data-level="minor">
+          <span class="item-icon">
+            <img src="assets/images/logos/veeam.png" alt="Veeam logo" />
+          </span>
+          <span class="item-text">
+            <span data-i18n="cert.011_line1"></span>
+            <span data-i18n="cert.011_line2"></span>
+          </span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Shared footer -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/partials.js" defer></script>
+  <script src="js/i18n/en.js" defer></script>
+  <script src="js/i18n/no.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/theme-toggle.js" defer></script>
+  <script src="js/filter.js" defer></script>
+</body>
+</html>

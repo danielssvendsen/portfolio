@@ -1,0 +1,281 @@
+/* ===================================
+   GLOBAL SETTINGS
+=================================== */
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-01);
+  /* Reserve space for fixed header/footer (matches your layout) */
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* ===================================
+   COLOR THEME VARIABLES
+=================================== */
+
+/* Light theme (default) */
+:root {
+  --color-01: #FFFFFF; /* Body background, Active button text */
+  --color-02: #F0F0F0; /* Section background, Inactive button background */
+  --color-03: #797979; /* General text, Button borders, Inactive button text */
+  --color-04: #FFA500; /* Accent (links hover, active button background) */
+  --color-05: #000000; /* Headings, Active/current link */
+
+  /* Shared layout constants */
+  --exp-icon: 48px;    /* fixed width for icon column (used by lists) */
+  --exp-gap: 14px;     /* gap between icon and text */
+}
+
+/* Dark theme overrides */
+.dark {
+  --color-01: #000000;
+  --color-02: #121212;
+  --color-03: #6C6C6C;
+  --color-04: #FFA500;
+  --color-05: #FFFFFF;
+}
+
+/* 50% translucent version of color-02 */
+:root { --surface-50: color-mix(in srgb, var(--color-02) 50%, transparent); }
+
+/* ===================================
+   TYPOGRAPHY
+=================================== */
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--color-03);
+}
+
+/* Headings rhythm (exp & cert expect this) */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-05);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Form controls inherit font */
+button, input, select, textarea { font: inherit; color: inherit; }
+
+/* ===================================
+   LAYOUT / BASE
+=================================== */
+
+/* Page container panel */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background-color: var(--color-02);
+}
+
+/* ===================================
+   NAVIGATION (fixed header)
+=================================== */
+
+.nav-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background-color: color-mix(in srgb, var(--color-02) 50%, transparent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+/* center column */
+.navbar {
+  grid-column: 2;
+  justify-self: center;
+}
+
+/* right column */
+.nav-actions {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li { display: flex; align-items: center; }
+
+.navbar a.active { color: var(--color-05); }
+.navbar a.active::after { width: 0; }
+.navbar a.active:hover::after { width: 100%; }
+
+/* Theme & language buttons */
+.theme-button,
+.lang-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-03);
+  cursor: pointer;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+.theme-button:hover,
+.lang-button:hover { color: var(--color-04); }
+
+.theme-button i { margin-right: 0.3rem; vertical-align: middle; }
+
+/* ===================================
+   LINKS
+=================================== */
+
+a {
+  position: relative;
+  color: var(--color-03);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  width: 0; height: 2px;
+  background: var(--color-04);
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+a:hover { color: var(--color-05); }
+a:hover::after { width: 100%; left: 50%; }
+
+/* ===================================
+   FOOTER (fixed)
+=================================== */
+
+.footer-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: color-mix(in srgb, var(--color-02) 50%, transparent);
+  backdrop-filter: blur(6px);
+  color: var(--color-03);
+  padding: 1rem 0;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social-icons { display: flex; gap: 1rem; justify-content: center; }
+.icon { text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem; }
+.icon i { margin-right: 0.3rem; }
+
+/* ===================================
+   BUTTONS (shared)
+=================================== */
+
+/* Normalize native button appearance */
+button, input[type="button"], input[type="submit"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid var(--color-03);
+  color: var(--color-03);
+  background-color: var(--color-02);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 0; /* square edges */
+}
+.button:hover { background-color: var(--color-04); color: var(--color-01); }
+.button.toggled { background-color: var(--color-04); color: var(--color-01); }
+
+/* Filter control row (used by exp & cert) */
+.filter-controls {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ===================================
+   SHARED LIST LAYOUT (used by exp + cert)
+=================================== */
+
+/* Generic flex column list; exp/cert add their own specifics */
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;                   /* let pages control section spacing */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Top-level item row layout (icon + text) */
+.filter-list > li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  /* color weight is controlled by page-specific css (exp.css/cert.css) */
+}
+
+/* Shared icon/text building blocks (used everywhere) */
+.item-icon {
+  flex: 0 0 var(--exp-icon);
+  width: var(--exp-icon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-icon img {
+  max-width: 100%;
+  max-height: var(--exp-icon);
+  object-fit: contain;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.item-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+.item-text > span { display: block; }
+
+/* First line tends to be a title; page css may override weight/color */
+.item-text > span:first-child { font-weight: bold; }
+
+/* Following lines are typically meta; page css may override */
+.item-text > span:not(:first-child) {
+  font-weight: normal;
+  color: var(--color-03);
+  font-size: 0.95em;
+}
