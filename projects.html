@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title data-i18n="meta.title">=EXAMPLE</title>
+  <title data-i18n="nav.projects">Prosjekter</title>
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
@@ -11,6 +11,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects.css">
 
   <!-- Boot Script -->
   <script src="js/boot.js"></script>
@@ -20,6 +21,63 @@
   <div id="site-header"></div>
 
   <main class="container">
+    <section class="projects-section" aria-labelledby="projects-title">
+      <h2 id="projects-title" data-i18n="nav.projects">Prosjekter</h2>
+
+      <ul class="projects-list">
+        <!-- Project 1 -->
+        <li class="project-card">
+          <div class="project-image">
+            <img src="assets/images/website-preview.jpg" alt="Screenshot of this website">
+          </div>
+          <div class="project-content">
+            <h3 data-i18n="projects.this_website.title">
+              Denne nettsiden (CS50X sluttprosjekt)
+            </h3>
+            <p data-i18n="projects.this_website.desc">
+              En personlig portefølje bygget som mitt sluttprosjekt for Harvard CS50X.
+            </p>
+            <a href="#" class="button" data-i18n="projects.open">Åpne</a>
+          </div>
+        </li>
+
+        <!-- Project 2 -->
+        <li class="project-card">
+          <div class="project-image">
+            <img src="assets/images/tba-project.jpg" alt="TBA project">
+          </div>
+          <div class="project-content">
+            <h3 data-i18n="projects.tba.title">TBA</h3>
+            <p data-i18n="projects.tba.desc">Prosjekt kommer senere.</p>
+            <a href="#" class="button" data-i18n="projects.open">Åpne</a>
+          </div>
+        </li>
+
+        <!-- Project 3 -->
+        <li class="project-card">
+          <div class="project-image">
+            <img src="assets/images/tba-project.jpg" alt="TBA project">
+          </div>
+          <div class="project-content">
+            <h3 data-i18n="projects.tba.title">TBA</h3>
+            <p data-i18n="projects.tba.desc">Prosjekt kommer senere.</p>
+            <a href="#" class="button" data-i18n="projects.open">Åpne</a>
+          </div>
+        </li>
+
+        <!-- Project 4 -->
+        <li class="project-card">
+          <div class="project-image">
+            <img src="assets/images/tba-project.jpg" alt="TBA project">
+          </div>
+          <div class="project-content">
+            <h3 data-i18n="projects.tba.title">TBA</h3>
+            <p data-i18n="projects.tba.desc">Prosjekt kommer senere.</p>
+            <a href="#" class="button" data-i18n="projects.open">Åpne</a>
+          </div>
+        </li>
+      </ul>
+    </section>
   </main>
 
   <!-- Shared footer -->

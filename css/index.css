@@ -1,0 +1,19 @@
+/* ===================================
+   INDEX PAGE STYLES
+   File: css/index.css
+=================================== */
+
+/* Even fade on all edges of intro image */
+.intro-image img {
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-composite: intersect;
+  -webkit-mask-repeat: no-repeat;
+
+  mask-image:
+    linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  mask-composite: intersect;
+  mask-repeat: no-repeat;
+}

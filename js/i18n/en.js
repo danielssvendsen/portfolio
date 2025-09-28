@@ -41,12 +41,10 @@ window.I18N.en = {
   // Experience page translations
   exp: {
     filter: {
-      all: "All",
       major: "Primary",
       minor: "Other"
     },
 
-    title: "Experience",
     skills_label: "Skills:",
 
     tussa: {
@@ -183,7 +181,6 @@ window.I18N.en = {
   // Certifications page translations
   cert: {
     filter: {
-      all: "All",
       major: "Main Certifications",
       minor: "Basic"
     },
@@ -228,5 +225,28 @@ window.I18N.en = {
 
     "011_line1": "Veeam Certified Technical Sales Professional (VMTSP) 2021",
     "011_line2": "Veeam Software"
+  },
+
+  // Projects page translations
+  projects: {
+    open: "Open",
+
+    this_website: {
+      title: "This Website (CS50X Final Project)",
+      desc: "A personal portfolio built as my final project for Harvard CS50X."
+    },
+
+    tba: {
+      title: "TBA",
+      desc: "Project coming soon."
+    }
+  },
+
+  // About page translations
+  about: {
+    p1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    p2: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    p3: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
+    p4: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
   }
 };

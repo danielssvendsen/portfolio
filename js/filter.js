@@ -1,49 +1,51 @@
 // File: js/filter.js
 (() => {
-  function initContainer(ctrl) {
-    // Find the UL that this control should filter
-    const scope = ctrl.closest('section, main, body') || document;
-    const list =
-      scope.querySelector('[data-filter-list]') ||
-      scope.querySelector('ul.cert-list, ul.exp-list, ul.filter-list');
+  function getList(ctrl) {
+    // The list is always the next sibling after filter-controls
+    let el = ctrl.nextElementSibling;
+    while (el && !el.matches?.('[data-filter-list]')) {
+      el = el.nextElementSibling;
+    }
+    return el;
+  }
 
+  function apply(ctrl) {
+    const list = getList(ctrl);
     if (!list) return;
 
     const buttons = Array.from(ctrl.querySelectorAll('button[data-filter]'));
-    const items   = Array.from(list.querySelectorAll(':scope > li[data-level]'));
+    const active = buttons
+      .filter(b => b.classList.contains('toggled'))
+      .map(b => b.dataset.filter.toLowerCase());
 
-    const apply = (filter) => {
-      const f = (filter || 'all').toLowerCase();
-      items.forEach(li => {
-        const lvl = (li.getAttribute('data-level') || '').toLowerCase();
-        li.style.display = (f === 'all' || f === lvl) ? '' : 'none';
-      });
-    };
-
-    // Initialize from the button that has .toggled (fallback: 'all')
-    let active = buttons.find(b => b.classList.contains('toggled'))?.dataset.filter || 'all';
-    apply(active);
-    buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === active)));
-
-    // Click handling
-    ctrl.addEventListener('click', (e) => {
-      const btn = e.target.closest('button[data-filter]');
-      if (!btn) return;
-      active = btn.dataset.filter;
-      buttons.forEach(b => {
-        const isActive = b === btn;
-        b.classList.toggle('toggled', isActive);
-        b.setAttribute('aria-pressed', String(isActive));
-      });
-      apply(active);
+    list.querySelectorAll('li[data-level]').forEach(li => {
+      const lvl = (li.dataset.level || '').toLowerCase();
+      li.style.display = active.includes(lvl) ? '' : 'none';
     });
   }
 
   function initAll() {
-    document.querySelectorAll('.filter-controls').forEach(initContainer);
+    document.querySelectorAll('.filter-controls').forEach(ctrl => {
+      ctrl.querySelectorAll('button[data-filter]').forEach(btn => {
+        btn.setAttribute('aria-pressed', String(btn.classList.contains('toggled')));
+      });
+      apply(ctrl);
+    });
   }
 
-  // Run on DOM ready and after partials (just in case)
+  // Init once and after partial reloads
   document.addEventListener('DOMContentLoaded', initAll);
   document.addEventListener('partials:loaded', initAll);
+
+  // Global delegated handler
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-filter]');
+    if (!btn) return;
+    const ctrl = btn.closest('.filter-controls');
+    if (!ctrl) return;
+
+    btn.classList.toggle('toggled');
+    btn.setAttribute('aria-pressed', String(btn.classList.contains('toggled')));
+    apply(ctrl);
+  });
 })();

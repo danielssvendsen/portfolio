@@ -135,14 +135,3 @@
   gap: var(--exp-gap);
   cursor: pointer;
 }
-
-/* make meta lines smaller (but NOT the first title line) */
-.exp-list .item-text > span:not(:first-child),
-.exp-roles > li .item-text > span:not(:first-child) {
-  font-size: 0.90em; /* was ~0.95em via global */
-}
-
-/* make description bullets and skills smaller */
-.exp-body {
-  font-size: 0.90em; /* was inheriting 1.0em */
-}
