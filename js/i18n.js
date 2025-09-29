@@ -1,3 +1,4 @@
+// File: js/i18n.js
 (function () {
   const DEFAULT_LANG = 'no'; // Norwegian by default
 

@@ -1,3 +1,4 @@
+// File: js/partials.js
 (() => {
   const HEADER_TARGET = document.getElementById('site-header');
   const FOOTER_TARGET = document.getElementById('site-footer');

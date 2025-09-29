@@ -33,8 +33,8 @@ window.I18N.en = {
     welcome: "Hello, welcome",
     intro_text: "My name is Daniel Standal Svendsen and this is my portfolio page.",
     note: "This website is essentially a glorified resume and also serves as the final project for my CS50X certification.",
-    cta_prefix: "Feel free to",
-    cta_suffix: "or browse the site to learn more. 🙂",
+    cta_prefix: "You can download",
+    cta_suffix: "here or browse the site to learn more. 🙂",
     cv_link: "my CV"
   },
 
@@ -166,7 +166,7 @@ window.I18N.en = {
         "Repair, preparation and RMA handling of computers and related equipment",
         "Contributed to efficient operations in a small team with high independence requirements"
       ],
-      skills: "IT support · Computer Hardware Troubleshooting · Microsoft Windows · Customer Satisfaction"
+       skills: "IT support · Computer Hardware Troubleshooting · Hardware Troubleshooting · Microsoft Windows · Computer Repair · Troubleshooting · Customer Satisfaction"
     },
 
     coop: {
@@ -227,6 +227,17 @@ window.I18N.en = {
     "011_line2": "Veeam Software"
   },
 
+  // About page translations
+  about: {
+    p1: "This portfolio site is a small experiment. I'm a \"recovering workaholic\" challenging myself to do something more creative. At the same time, it's my final project for CS50x.",
+    p2: "Efficiency has always been my strongest suit. During my ten years at Ålesund Data, I handled more than 65,000 human-generated emails while maintaining continuous customer contact by phone. Despite this, I maintained high quality in deliveries and was often sent on the most demanding assignments.",
+    p3: "In project work, I was often assigned both configuration and coordination tasks. Cables, racks, and physical labor were usually handled by colleagues, while I took care of the setup and all project-related communication. This effectively made me a bridge with authority. A role that suited me well, as I enjoy structure and get things done quickly.",
+    p4: "I place great emphasis on structure and accuracy, whether it's managing complex systems like Active Directory or documenting work so others can build on it. These kinds of details ensure things work over time, not just in the moment.",
+    p5: "I'm direct, impatient, and not fond of \"small talk,\" but I'm also reliable, honest, and results-oriented. Customers and colleagues have appreciated that I'm clear and that I deliver when it really counts.",
+    p6: "I have a 3-year vocational education in computer electronics, but for me, hands-on experience has always been far more valuable than papers. It's in demanding projects that I've learned the most, both technically and personally.",
+    p7: "I'm now looking for an environment where efficiency, professionalism, and balance are valued, and where I can use my experience to create lasting results for both clients and employers."
+  },
+
   // Projects page translations
   projects: {
     open: "Open",
@@ -241,12 +252,4 @@ window.I18N.en = {
       desc: "Project coming soon."
     }
   },
-
-  // About page translations
-  about: {
-    p1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    p2: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-    p3: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
-    p4: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
-  }
 };

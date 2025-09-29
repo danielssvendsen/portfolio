@@ -41,7 +41,7 @@ html {
   --color-01: #121212;
   --color-02: #1E1E1E;
   --color-03: #A0A0A0;
-  --color-04: #FFA500;
+  --color-04: #00BFA6;
   --color-05: #F8F9FA;
 }
 
@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-05);
   margin-top: 0;
   margin-bottom: 0.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -77,11 +77,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .container {
   max-width: 900px;
   margin: 2rem auto;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   background-color: var(--color-02);
   border: 1px solid var(--color-03);
   transition: border-color 0.3s ease;
-  border-radius: 6px;
+  border-radius: 0px;
 }
 
 .container:hover {

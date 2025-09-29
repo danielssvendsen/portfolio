@@ -43,7 +43,7 @@
       // Localized label (fallbacks)
       const lang    = window.I18N?.getLang?.() || 'no';
       const dict    = (window.I18N?.DICTS?.[lang] || {}).buttons?.theme || {};
-      const text    = dict.label || (target === 'dark' ? 'Mørk modus' : 'Lyst modus');
+      const text    = dict.label || (target === 'dark' ? 'Mørk modus' : 'Lys modus');
       const aria    = dict.aria || 'Bytt tema';
 
       icon.className = target === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';

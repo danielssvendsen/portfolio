@@ -1,25 +1,21 @@
 /* ===================================
    EXPERIENCE PAGE STYLES
-   File: css/exp.css
-   (Design preserved exactly)
 =================================== */
 
-/* Base typography overrides for experience list */
+
+
+/* Typography for experience list */
 .exp-list li {
   font-weight: normal;
   color: var(--color-03);
 }
 
-/* First line (role/title) stands out */
 .exp-list .item-text > span:first-child {
   font-weight: 600;
   color: var(--color-05);
 }
 
-/* ========== Summary rows (with caret) ========== */
-
-/* Ensure ALL experience summaries (including static ones) are flex,
-   so the logo sits BESIDE the text, not above */
+/* Experience summary row layout */
 .exp-summary {
   display: flex;
   align-items: flex-start;
@@ -28,96 +24,72 @@
   cursor: pointer;
 }
 
-/* Hide the native marker for <summary> where applicable */
-.exp-summary::-webkit-details-marker { display: none; }
-
-/* Make <details> stretch full width for proper caret alignment */
-.exp { width: 100%; }
-
-/* Static rows (like Ålesund Data header, Coop) are not clickable */
-.exp-summary.static { cursor: default; }
-
-/* ========== Caret (► / ▼) ========== */
-.exp-caret {
-  margin-left: auto;
-  width: 1.1rem;
-  height: 1.1rem;
-  border: solid var(--color-03);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);               /* ► */
-  transition: transform .2s ease;
-  margin-top: 4px;                        /* align with first text line */
+.exp-summary.static {
+  cursor: default;
 }
-.exp[open] .exp-caret { transform: rotate(-135deg); } /* ▼ */
 
-/* ========== Bodies / indentation ========== */
+/* Full-width for experience blocks */
+.exp {
+  width: 100%;
+}
 
-/* Default: align body content under the text column (accounts for icon) */
+/* Experience body indentation */
 .exp-body {
   margin-top: 10px;
   padding-left: calc(var(--exp-icon) + var(--exp-gap));
   color: var(--color-03);
 }
 
-/* For nested ROLE bodies inside the Ålesund group, remove the icon padding.
-   Use higher specificity so this always wins over the default rule above. */
-.exp-roles > li > details.exp > .exp-body,
-.exp-roles .exp-body {
-  padding-left: 0;
-}
-
-/* Keep nested bullets tight (no extra UA margin) */
-.exp-roles .exp-body > ul {
-  margin-left: 0;
-}
-
-/* ========== Nested Roles List (Ålesund group) ========== */
-
+/* Nested experience roles (e.g. Ålesund) */
 .exp-roles {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Each nested role item */
 .exp-roles > li {
   display: block;
-  margin: 12px 0 0 0;
+  margin-top: 12px;
   font-weight: normal;
   color: var(--color-03);
 }
 
-/* Remove any markers/dashes for the role header rows themselves */
-.exp-roles > li::marker { content: ""; }
-.exp-roles > li::before { content: none !important; }
+/* Remove default list styles from nested roles */
+.exp-roles > li::marker {
+  content: "";
+}
+.exp-roles > li::before {
+  content: none !important;
+}
 
-/* Role header text formatting inside nested roles */
+/* Layout and text formatting for nested role headers */
 .exp-roles > li .item-text {
   display: flex;
   flex-direction: column;
   line-height: 1.35;
 }
+
 .exp-roles > li .item-text > span:first-child {
   font-weight: 600;
   color: var(--color-05);
 }
+
 .exp-roles > li .item-text > span:not(:first-child) {
   font-size: 0.95em;
   color: var(--color-03);
 }
 
-/* ========== Bullets inside exp bodies (dashes) ========== */
-
+/* Bullet list styling inside exp bodies */
 .exp-body > ul,
 .exp-roles > li > ul {
-  list-style: none;          /* remove native dots */
+  list-style: none;
   margin: 0.25rem 0 0.5rem 0;
   padding-left: 0;
 }
 
 .exp-body > ul li::marker,
 .exp-roles > li > ul li::marker {
-  content: "";               /* safety: hide native marker */
+  content: "";
 }
 
 .exp-body > ul li::before,
@@ -126,12 +98,13 @@
   color: var(--color-03);
 }
 
-/* ========== Safety: summaries inside filter-list (older structure) ========== */
-/* If a <summary> is used without the .exp-summary class, ensure flex layout anyway */
-.filter-list summary {
-  list-style: none;
-  display: flex;
-  align-items: flex-start;
-  gap: var(--exp-gap);
-  cursor: pointer;
+/* Remove padding for nested roles inside exp bodies */
+.exp-roles > li > details.exp > .exp-body,
+.exp-roles .exp-body {
+  padding-left: 0;
+}
+
+/* Remove extra indentation for nested role bullet lists */
+.exp-roles .exp-body > ul {
+  margin-left: 0;
 }
