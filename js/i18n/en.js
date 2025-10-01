@@ -11,7 +11,8 @@ window.I18N.en = {
 
   buttons: {
     theme: {
-      label: "Light mode",
+      light: "Light mode",
+      dark: "Dark mode",
       aria: "Toggle theme"
     },
     lang: {

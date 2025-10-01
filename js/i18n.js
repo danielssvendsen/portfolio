@@ -129,7 +129,13 @@
   }
 
   // ---- public api ----
-  window.I18N = Object.assign(window.I18N || {}, { getLang, setLang, applyI18n, t });
+  window.I18N = Object.assign(window.I18N || {}, {
+    getLang,
+    setLang,
+    applyI18n,
+    t,
+    DICTS: getDicts()   // ✅ added so theme-toggle.js can access translations
+  });
 
   // ---- boot ----
   document.addEventListener('DOMContentLoaded', () => {

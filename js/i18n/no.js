@@ -11,7 +11,8 @@ window.I18N.no = {
 
   buttons: {
     theme: {
-      label: "Lys modus",
+      light: "Lys modus",
+      dark: "Mørk modus",
       aria: "Bytt tema"
     },
     lang: {
