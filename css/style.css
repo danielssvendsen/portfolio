@@ -30,6 +30,7 @@ html {
   --color-03: #6C757D; /* General text, Button borders, Inactive button text */
   --color-04: #00BFA6; /* Accent (links hover, active button background) */
   --color-05: #212529; /* Headings, Active/current link */
+  --color-06: #DEE2E6; /* Subtle borders/dividers
 
   /* Shared layout constants */
   --exp-icon: 48px;    /* fixed width for icon column (used by lists) */
@@ -43,6 +44,7 @@ html {
   --color-03: #A0A0A0;
   --color-04: #00BFA6;
   --color-05: #F8F9FA;
+  --color-06: #2C2C2C;
 }
 
 /* 50% translucent version of color-02 */
@@ -79,7 +81,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   margin: 2rem auto;
   padding: 2rem 2rem;
   background-color: var(--color-02);
-  border: 1px solid var(--color-03);
+  border: 1px solid var(--color-06);
   transition: border-color 0.3s ease;
   border-radius: 0px;
 }
@@ -106,7 +108,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
 
-  border-bottom: 1px solid var(--color-03);
+  border-bottom: 1px solid var(--color-06);
   transition: border-color 0.3s ease;
 }
 
@@ -200,7 +202,7 @@ a:hover::after { width: 100%; left: 50%; }
   box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
   text-align: center;
 
-  border-top: 1px solid var(--color-03);
+  border-top: 1px solid var(--color-06);
   transition: border-color 0.3s ease;
 }
 

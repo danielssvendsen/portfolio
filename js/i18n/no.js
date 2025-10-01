@@ -189,9 +189,9 @@ window.I18N.no = {
     "001_line2": "Sophos",
     "001_line3": "Utstedt Aug 2019",
 
-    "002_line1": "CS50x",
+    "002_line1": "CS50's Introduction to Computer Science",
     "002_line2": "Harvard",
-    "002_line3": "Credential ID:",
+    "002_line3": "Credential URL: https://cs50.harvard.edu/certificates/6fa56375-af83-4362-a78b-b7ddf3ff995a",
 
     "003_line1": "Fortinet Certified Associate in Cybersecurity",
     "003_line2": "Fortinet",
@@ -232,7 +232,7 @@ window.I18N.no = {
     p1: "Denne porteføljesiden er et lite eksperiment. Jeg er en \"recovering workaholic\" som utfordrer meg selv til å gjøre noe mer kreativt. Samtidig fungerer den som mitt sluttprosjekt i CS50x.",
     p2: "Effektivitet har alltid vært min sterkeste side. I løpet av mine ti år hos Ålesund Data håndterte jeg mer enn 65 000 menneskeskapte e-poster, samtidig som jeg var i kontinuerlig kundedialog på telefon. Til tross for dette beholdt jeg høy kvalitet i leveransene og ble ofte sendt ut på de mest krevende oppdragene.",
     p3: "I prosjektarbeid ble jeg ofte satt til å håndtere både konfigurasjon og koordinering. Kabler, stativer og fysisk arbeid tok gjerne kollegaene seg av, mens jeg sto for selve oppsettet og all dialogen rundt prosjektet. Det gjorde meg i praksis til et bindeledd med autoritet. En rolle som passet meg godt fordi jeg både liker struktur og får ting gjort raskt.",
-    p4: "Jeg legger stor vekt på struktur og nøyaktighet, enten det gjelder å holde oversikt i komplekse systemer som Active Directory eller å dokumentere arbeidet slik at andre kan bygge videre på det. Slike detaljer gjør at ting fungerer over tid, ikke bare der og da.",
+    p4: "Jeg legger stor vekt på struktur og nøyaktighet, enten det gjelder å holde oversikt i komplekse systemer i AD, GPO'er og brannmurer eller å dokumentere arbeidet slik at andre kan bygge videre på det. Slike detaljer gjør at ting fungerer over tid, ikke bare der og da.",
     p5: "Jeg er direkte, utålmodig og lite glad i \"small talk\", men jeg er også pålitelig, ærlig og resultatorientert. Kunder og kolleger har satt pris på at jeg er tydelig, og at jeg leverer når det virkelig gjelder.",
     p6: "Jeg har en 3-årig yrkesutdanning innen dataelektronikk, men for meg har praktisk erfaring alltid vært langt mer verdifullt enn papirer. Det er i krevende prosjekter jeg har lært mest, både faglig og personlig.",
     p7: "Nå ser jeg etter et miljø hvor effektivitet, profesjonalitet og balanse blir verdsatt, og hvor jeg kan bruke erfaringene mine til å skape varige resultater for både kunder og arbeidsgiver."

@@ -1,6 +1,6 @@
 # Portfolio Website (CS50x Final Project)
 
-#### Video Demo: <PUT YOUR VIDEO LINK HERE>
+#### Video Demo: https://youtu.be/PDIekXIugRc
 
 #### Description:
 This project is my final submission for Harvard’s CS50x course. It’s a personal portfolio website built from scratch using only HTML, CSS, and JavaScript — without any frameworks or site generators. The goal was to create a clean, accessible, and responsive web presence that showcases my background, certifications, work experience, and personal projects.

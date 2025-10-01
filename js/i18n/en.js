@@ -189,9 +189,9 @@ window.I18N.en = {
     "001_line2": "Sophos",
     "001_line3": "Issued Aug 2019",
 
-    "002_line1": "CS50x",
+    "002_line1": "CS50's Introduction to Computer Science",
     "002_line2": "Harvard",
-    "002_line3": "Credential ID:",
+    "002_line3": "Credential URL: https://cs50.harvard.edu/certificates/6fa56375-af83-4362-a78b-b7ddf3ff995a",
 
     "003_line1": "Fortinet Certified Associate in Cybersecurity",
     "003_line2": "Fortinet",
@@ -232,7 +232,7 @@ window.I18N.en = {
     p1: "This portfolio site is a small experiment. I'm a \"recovering workaholic\" challenging myself to do something more creative. At the same time, it's my final project for CS50x.",
     p2: "Efficiency has always been my strongest suit. During my ten years at Ålesund Data, I handled more than 65,000 human-generated emails while maintaining continuous customer contact by phone. Despite this, I maintained high quality in deliveries and was often sent on the most demanding assignments.",
     p3: "In project work, I was often assigned both configuration and coordination tasks. Cables, racks, and physical labor were usually handled by colleagues, while I took care of the setup and all project-related communication. This effectively made me a bridge with authority. A role that suited me well, as I enjoy structure and get things done quickly.",
-    p4: "I place great emphasis on structure and accuracy, whether it's managing complex systems like Active Directory or documenting work so others can build on it. These kinds of details ensure things work over time, not just in the moment.",
+    p4: "I place great emphasis on structure and accuracy, whether it's managing complex systems in AD, GPO's and firewalls or documenting work so others can build on it. These kinds of details ensure things work over time, not just in the moment.",
     p5: "I'm direct, impatient, and not fond of \"small talk,\" but I'm also reliable, honest, and results-oriented. Customers and colleagues have appreciated that I'm clear and that I deliver when it really counts.",
     p6: "I have a 3-year vocational education in computer electronics, but for me, hands-on experience has always been far more valuable than papers. It's in demanding projects that I've learned the most, both technically and personally.",
     p7: "I'm now looking for an environment where efficiency, professionalism, and balance are valued, and where I can use my experience to create lasting results for both clients and employers."
